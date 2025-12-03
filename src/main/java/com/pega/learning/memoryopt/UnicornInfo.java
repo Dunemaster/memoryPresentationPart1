@@ -1,5 +1,11 @@
 package com.pega.learning.memoryopt;
 
+import org.checkerframework.checker.nullness.qual.Nullable;
+
+/**
+ *  A unicorn is a company that reached a valuation of
+ *  1 billion US dollars. For some reason we want to
+ */
 public final class UnicornInfo {
 
     final boolean isUnicorn;
@@ -8,9 +14,14 @@ public final class UnicornInfo {
      * The year when the company reached unicorn status.
      * Can be {@code null} if the company is not a unicorn or the year is not available.
      */
+    @Nullable
     final Integer unicornStatusReachedYear;
 
-    // Can be {@code null} if the company is not a unicorn or the year is not available.
+    /**
+     *  Market capitalization in billions USD.
+     *  Can be {@code null} if the company is not a unicorn or the year is not available.
+     */
+    @Nullable
     final Integer marketCapInBillions;
 
     public UnicornInfo(boolean isUnicorn, Integer unicornStatusReachedYear,
